@@ -1,18 +1,20 @@
-import { ThemeProvider } from 'next-themes';
 import Script from 'next/script';
+import { ThemeProvider } from 'next-themes';
 
-import { Navbar, Footer } from '../component';
+import { Navbar, Footer } from '../components';
 import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps }) => (
-  // Theme will change with attribute class
   <ThemeProvider attribute="class">
-    <div className="bg-white min-h-screen dark:bg-nft-dark">
+    <div className="dark:bg-nft-dark bg-white min-h-screen">
       <Navbar />
-      <Component {...pageProps} />
+      <div className="pt-65">
+        <Component {...pageProps} />
+      </div>
       <Footer />
     </div>
-    <Script src="https://kit.fontawesome.com/e1adcde454.js" crossorigin="anonymous" />
+
+    <Script src="https://kit.fontawesome.com/d45b25ceeb.js" crossorigin="anonymous" />
   </ThemeProvider>
 
 );
