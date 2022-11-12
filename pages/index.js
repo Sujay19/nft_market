@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useTheme } from 'next-themes';
 
 import images from '../assets';
-import { Banner, CreatorCard } from '../components';
+import { Banner, CreatorCard, NFTCard } from '../components';
 import { makeid } from '../utils/makeId';
 
 const Home = () => {
@@ -83,6 +83,30 @@ const Home = () => {
               </>
               )}
             </div>
+          </div>
+        </div>
+        <div className="mt-10">
+          <div className="flexBetween  mx-4 minlg:mx-8 xs:mx-0  sm:flex-col sm:items-start">
+            <h1 className="font-poppins flex-1  sm:mb-4 font-semibold dark:text-white text-nft-black-1 text-2xl minlg:text-4xl sm:ml-0 ml-4">Hot Bids</h1>
+            <div>SearchBar</div>
+          </div>
+          <div className="flex flex-wrap w-full mt-3  justify-start md:justify-center">
+            {
+              [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
+                <NFTCard
+                  key={`nft-${i}`}
+                  nft={{
+                    i,
+                    name: `NIFTY nft ${i}`,
+                    price: (10 - i * 0.543).toFixed(2),
+                    seller: `0x${makeid(3)}...${makeid(3)}`,
+                    owner: `0x${makeid(3)}...${makeid(3)}`,
+                    description: 'Cool NFT on sale',
+                  }}
+
+                />
+              ))
+            }
           </div>
         </div>
       </div>
