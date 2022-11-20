@@ -90,7 +90,7 @@ const Home = () => {
             <h1 className="font-poppins flex-1  sm:mb-4 font-semibold dark:text-white text-nft-black-1 text-2xl minlg:text-4xl sm:ml-0 ml-4">Hot Bids</h1>
             <div>SearchBar</div>
           </div>
-          <div className="flex flex-wrap w-full mt-3  justify-start md:justify-center">
+          <div className="flex flex-wrap w-full mt-3 justify-start md:justify-center">
             {
               [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
                 <NFTCard
