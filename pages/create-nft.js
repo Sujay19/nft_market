@@ -30,7 +30,7 @@ const CreateNFT = () => {
   ), [isDragActive, isDragAccept, isDragReject]);
 
   return (
-    <div className="flex justify-center px-12 sm:px-4">
+    <div className="flex justify-center px-12 sm:px-4 mt-8">
       <div className=" w-3/5 md:w-full">
         <h1 className="font-poppins  font-semibold dark:text-white text-nft-black-1 text-2xl minlg:text-4xl sm:ml-0 ml-4">Create new NFT</h1>
         <div className="mt-16">
